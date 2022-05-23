@@ -44,7 +44,6 @@ input[type=radio]{
 
 .flexbox{
     display: flex;
-
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -68,18 +67,7 @@ input[type=radio]{
     border-radius: 50%;
     background-color: var(--mediumGreyOp);
 }
-/* input[name=rate]:nth-of-type(1):checked ~ .opt:nth-of-type(1){
-    opacity: 1;
-    background-color: var(--orange);
-} */
-/* input[name=rate]:not(:checked) ~ .opt{
-    background-color: var(--mediumGrey);
-    opacity: .5;
-}
-.optChosen{
-    opacity: 1;
-    background-color: var(--orange);
-} */
+
 .card{
     width: 90%;
     max-width: 40ch;
@@ -123,10 +111,6 @@ input[type=radio]{
     background-color: var(--white);
     color: var(--orange);
 }
-/* #star{
-    background-color: var(--mediumGreyOp);
-    border-radius: 50%;
-} */
 .attribution { 
     width: 100%;
     font-size: .5rem; 
