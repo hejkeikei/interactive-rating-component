@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://codepen.io/TingHueiChen/pen/eYVWEay
+- Solution URL: https://hejkeikei.github.io/interactive-rating-component/
 
 ## My process
 
@@ -91,7 +91,6 @@ I would try to go with object oriented way such as event target to select an ele
 ### Useful resources
 
 - [Prevent page refresh](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) - This help me prevent page refresh after form submit(since I'm not doing backend here).
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
