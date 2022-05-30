@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <form id="rating" action="" method="post" class="card">
+    <form id="rating" action="#" method="post" class="card">
       <img src="images/icon-star.svg" alt="rating icon" id="star" />
       <h1>How did we do?</h1>
       <p>
@@ -59,13 +59,15 @@
     </div>
 
     <!-- Thank you state end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://codepen.io/TingHueiChen">Ting-Huei Chen</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://codepen.io/TingHueiChen">Ting-Huei Chen</a>.
+      </div>
+    </footer>
     <script>
       var getSiblings = function (elem) {
         var siblings = [];
@@ -78,20 +80,19 @@
         }
         return siblings;
       };
-      var userInput;
+
       var opt = document.querySelectorAll("input[name=rate]");
       for (let i of opt) {
         i.addEventListener("click", function () {
-          userInput = i.value;
           let rateNum = "label[for=rate" + i.value + "]";
-          console.log(rateNum);
+          // console.log(rateNum);
           let optBtn = document.querySelector(rateNum);
-          console.log(optBtn);
+          // console.log(optBtn);
           optBtn.style.backgroundColor = "var(--orange)";
           let sib = getSiblings(optBtn);
           // console.log(sib);
           for (let i in sib) {
-            console.log(sib[i]);
+            // console.log(sib[i]);
             sib[i].style.backgroundColor = "var(--mediumGreyOp)";
           }
         });
@@ -101,8 +102,9 @@
 
       submitBtn.addEventListener("click", function () {
         event.preventDefault();
-        userValue.innerHTML = userInput;
-        console.log("Usersays: " + userInput);
+        var formInput = document.getElementById("rating");
+        var formData = new FormData(formInput);
+        userValue.innerHTML = formData.get("rate");
         let pop = document.getElementById("thankYou");
         pop.style.display = "block";
         rating.style.display = "none";
